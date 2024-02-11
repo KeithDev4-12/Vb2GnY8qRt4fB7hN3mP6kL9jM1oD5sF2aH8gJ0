@@ -14,6 +14,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
   <style id="INLINE_PEN_STYLESHEET_ID">
+
+  .zoomed {
+        transform-origin: center center;
+        transition: transform 0.5s ease;
+    }
     .password {
     display:none;  
     position: absolute;
@@ -466,7 +471,7 @@ random-button {
   font-size: 14px;
   line-height: 1.15;
   overflow: visible;
-  padding: 12px 16px;
+  padding: 22px 26px;
   position: relative;
   text-align: center;
   text-transform: none;
@@ -475,6 +480,7 @@ random-button {
   -webkit-user-select: none;
   touch-action: manipulation;
   width: fit-content;
+  margin:10px;
 }
 
 .button-26:disabled {
@@ -503,8 +509,13 @@ random-button {
 <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script><!--  -->
 </head>
 
-<body oncontextmenu="return true;">
+<body oncontextmenu="return false;">
+  
+
   <div class="container">
+    <H1 style="text-align:center; margin: 100px; position:relative;">
+      JUST CLICK!!!
+    </H1>
     <input type="button" value="CLICK TO PREVIEW"  onmouseover="checkAndMove(this);" onclick="changeLocation(this);"   class="button button-26"/>
   </div>
 
@@ -700,7 +711,7 @@ function changeLocation(e) {
             containerdiv[i].style.display = "none"; // Hide all buttons with class name "container"
         }
         console.log("done")
-       
+        zoomIn();
         e.onclick = null;
         return;
     }
@@ -754,6 +765,22 @@ function chooseSide(pos, size) {
     return random;
 }
 
+
+let zoomLevel = 1.0; // Initial zoom level
+
+    function zoomIn() {
+        zoomLevel += 0.5; // Increase zoom level by 20%
+        updateZoom();
+    }
+
+    function zoomOut() {
+        zoomLevel -= 0.2; // Decrease zoom level by 20%
+        updateZoom();
+    }
+
+    function updateZoom() {
+        document.body.style.transform = `scale(${zoomLevel})`;
+    }
 
     </script>
 
