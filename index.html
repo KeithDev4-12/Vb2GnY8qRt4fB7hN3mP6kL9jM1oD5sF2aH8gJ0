@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head>
+
+  <meta charset="UTF-8">
+  <title>Happy Valentine's Day</title>
+
+  <meta name="robots" content="noindex">
+
+
+  
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&amp;display=swap">
+<link rel="stylesheet" href="https://cdn.rawgit.com/noppa/text-security/master/dist/text-security.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    .password {
+    display:none;  
+    position: absolute;
+  --background: #ffffff;
+  --text-color: #414856;
+  --border-radius: 8px;
+  --width: 210px;
+  --height: 55px;
+  background: var(--background);
+  width: var(--width);
+  height: var(--height);
+  padding: 0 var(--height) 0 20px;
+  position: relative;
+  line-height: var(--height);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+}
+.password .password-checkbox {
+  position: absolute;
+  width: var(--height);
+  height: 100%;
+  right: 0;
+  top: 0;
+  margin: 0;
+  z-index: 1;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.password .monkey,
+.password .monkey-hands {
+  position: absolute;
+  width: var(--height);
+  height: 100%;
+  right: 0;
+  top: 0;
+  margin: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.password .monkey svg,
+.password .monkey-hands svg {
+  height: calc(var(--height) - 20px);
+  width: calc(var(--height) - 20px);
+}
+.password .monkey {
+  cursor: pointer;
+}
+.password .monkey::before {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+  width: 3px;
+  height: 0px;
+  border-radius: 50%;
+  top: 36px;
+  border-bottom: 3px solid #3C302A;
+}
+.password .monkey-hands {
+  z-index: 2;
+  perspective: 80px;
+  pointer-events: none;
+}
+.password .monkey-hands svg {
+  transition: transform 0.2s ease-in, opacity 0.1s;
+  transform-origin: 50% 100%;
+}
+.password .password-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.password .password-wrapper .password-input,
+.password .password-wrapper .password-text,
+.password .password-wrapper .password-dots {
+  letter-spacing: 2px;
+  color: var(--text-color);
+}
+.password .password-wrapper .password-input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  padding: 0;
+  background: none;
+  color: transparent;
+}
+.password .password-wrapper .password-input::-moz-selection {
+  background: var(--background);
+  color: var(--background);
+}
+.password .password-wrapper .password-input::selection {
+  background: var(--background);
+  color: var(--background);
+}
+.password .password-wrapper .password-text,
+.password .password-wrapper .password-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  pointer-events: none;
+  line-height: var(--height);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.password .password-wrapper .password-text > span,
+.password .password-wrapper .password-dots > span {
+  transition: all 0.5s ease;
+  display: inline-block;
+  opacity: var(--opacity, 0);
+}
+.password .password-wrapper .password-text.cursor::after,
+.password .password-wrapper .password-dots.cursor::after {
+  content: "";
+  width: 1px;
+  height: 20px;
+  -webkit-text-security: none;
+  background: rgba(65, 72, 86, 0.5);
+  opacity: var(--opacity, 0);
+  display: inline-block;
+  -webkit-animation: blink 0.75s linear infinite alternate;
+          animation: blink 0.75s linear infinite alternate;
+}
+.password .password-wrapper .password-dots {
+  letter-spacing: 6px;
+  -webkit-text-security: disc;
+  font-family: "text-security-disc";
+}
+.password.show .monkey-hands svg {
+  transform: perspective(100px) rotateX(-90deg);
+  perspective-origin: bottom;
+  opacity: var(--opacity, 0);
+  transition: transform 0.2s ease, opacity 0.1s 0.1s;
+}
+.password.show .monkey::before {
+  content: "";
+  border-radius: 45%;
+  width: 9px;
+  height: 6px;
+  border: 0;
+  border-bottom: 2px solid #3C302A;
+  top: 30px;
+}
+.password.show .password-wrapper .password-text > span {
+  -webkit-animation: bounce 1s cubic-bezier(0, 1.26, 0.42, 1.26) forwards;
+          animation: bounce 1s cubic-bezier(0, 1.26, 0.42, 1.26) forwards;
+}
+.password.show .password-wrapper .password-text > span:nth-child(1) {
+  -webkit-animation-delay: 0.04s;
+          animation-delay: 0.04s;
+}
+.password.show .password-wrapper .password-text > span:nth-child(2) {
+  -webkit-animation-delay: 0.08s;
+          animation-delay: 0.08s;
+}
+.password.show .password-wrapper .password-text > span:nth-child(3) {
+  -webkit-animation-delay: 0.12s;
+          animation-delay: 0.12s;
+}
+.password.show .password-wrapper .password-text > span:nth-child(4) {
+  -webkit-animation-delay: 0.16s;
+          animation-delay: 0.16s;
+}
+.password.show .password-wrapper .password-text > span:nth-child(5) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.password.show .password-wrapper .password-text > span:nth-child(6) {
+  -webkit-animation-delay: 0.24s;
+          animation-delay: 0.24s;
+}
+.password.show .password-wrapper .password-text > span:nth-child(7) {
+  -webkit-animation-delay: 0.28s;
+          animation-delay: 0.28s;
+}
+.password.show .password-wrapper .password-text > span:nth-child(8) {
+  -webkit-animation-delay: 0.32s;
+          animation-delay: 0.32s;
+}
+.password.show .password-wrapper .password-text > span:nth-child(9) {
+  -webkit-animation-delay: 0.36s;
+          animation-delay: 0.36s;
+}
+.password.show .password-wrapper .password-text.cursor > span {
+  -webkit-animation: none;
+          animation: none;
+  opacity: var(--opacity, 1);
+}
+.password.show .password-wrapper .password-text.cursor > span:last-child {
+  -webkit-animation: bounce 1s cubic-bezier(0, 1.26, 0.42, 1.26) forwards alternate;
+          animation: bounce 1s cubic-bezier(0, 1.26, 0.42, 1.26) forwards alternate;
+  opacity: var(--opacity, 0);
+}
+.password.show .password-wrapper .password-dots.cursor::after {
+  display: none;
+}
+.password:not(.show) .password-wrapper .password-text.cursor::after {
+  display: none;
+}
+.password:not(.show) .password-wrapper .password-dots > span {
+  -webkit-animation: bounce 1s cubic-bezier(0, 1.26, 0.42, 1.26) forwards alternate;
+          animation: bounce 1s cubic-bezier(0, 1.26, 0.42, 1.26) forwards alternate;
+}
+.password:not(.show) .password-wrapper .password-dots > span:nth-child(1) {
+  -webkit-animation-delay: 0.04s;
+          animation-delay: 0.04s;
+}
+.password:not(.show) .password-wrapper .password-dots > span:nth-child(2) {
+  -webkit-animation-delay: 0.08s;
+          animation-delay: 0.08s;
+}
+.password:not(.show) .password-wrapper .password-dots > span:nth-child(3) {
+  -webkit-animation-delay: 0.12s;
+          animation-delay: 0.12s;
+}
+.password:not(.show) .password-wrapper .password-dots > span:nth-child(4) {
+  -webkit-animation-delay: 0.16s;
+          animation-delay: 0.16s;
+}
+.password:not(.show) .password-wrapper .password-dots > span:nth-child(5) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.password:not(.show) .password-wrapper .password-dots > span:nth-child(6) {
+  -webkit-animation-delay: 0.24s;
+          animation-delay: 0.24s;
+}
+.password:not(.show) .password-wrapper .password-dots > span:nth-child(7) {
+  -webkit-animation-delay: 0.28s;
+          animation-delay: 0.28s;
+}
+.password:not(.show) .password-wrapper .password-dots > span:nth-child(8) {
+  -webkit-animation-delay: 0.32s;
+          animation-delay: 0.32s;
+}
+.password:not(.show) .password-wrapper .password-dots > span:nth-child(9) {
+  -webkit-animation-delay: 0.36s;
+          animation-delay: 0.36s;
+}
+.password:not(.show) .password-wrapper .password-dots.cursor > span {
+  -webkit-animation: none;
+          animation: none;
+  opacity: var(--opacity, 1);
+}
+.password:not(.show) .password-wrapper .password-dots.cursor > span:last-child {
+  -webkit-animation: bounce 1s cubic-bezier(0, 1.26, 0.42, 1.26) forwards alternate;
+          animation: bounce 1s cubic-bezier(0, 1.26, 0.42, 1.26) forwards alternate;
+  opacity: var(--opacity, 0);
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  30% {
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  35% {
+    transform: translateY(1px);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  30% {
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  35% {
+    transform: translateY(1px);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes blink {
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/* CSS */
+.button-4 {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: absolute;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  width:100%;
+  margin-left: -20px;
+  margin-top:5px;
+}
+
+.button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-4:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.button-4:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-4:focus {
+  outline: 1px transparent;
+}
+
+.button-4:before {
+  display: none;
+}
+
+.button-4:-webkit-details-marker {
+  display: none;
+}
+body {
+  background: #E8EBF3;
+  height: 100vh;
+  font: 400 16px "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .socials {
+  position: fixed;
+  display: block;
+  left: 20px;
+  bottom: 20px;
+}
+body .socials > a {
+  display: block;
+  width: 30px;
+  opacity: var(--opacity, 0.2);
+  transform: scale(var(--scale, 0.8));
+  transition: transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
+}
+body .socials > a:hover {
+  --scale: 1;
+}
+.password-header {
+  margin-bottom:10px;
+}
+
+random-button {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .container {
+  position:relative;
+  display:block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.button {
+  position:relative;
+  left:0%;
+  top:0%;
+  border-radius: 5px;
+  -webkit-animation-name: flash;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash{
+  /*0%, 100%{background: red;}
+  25%{background: yellow;}
+  50%{background: green;}
+  75%{background: blue;}*/
+}
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script><!--  -->
+</head>
+
+<body oncontextmenu="return true;">
+  <div class="container">
+    <input type="button" value="CLICK TO PREVIEW"  onmouseover="checkAndMove(this);" onclick="changeLocation(this);"   class="button"/>
+  </div>
+
+  <h2 class="password-header">Need Password? Ask Only if you want Access.</h2>  
+  <div class="password" id="password">
+
+  <div class="monkey-hands">
+    <svg>
+      <use xlink:href="#monkey-hands"></use>
+    </svg>
+  </div>
+  <div class="monkey">
+    <svg>
+      <use xlink:href="#monkey"></use>
+    </svg>
+  </div>
+  <div class="password-wrapper">
+    <input type="text" class="password-input" value="password" spellcheck="false" maxlength="15">
+
+    <span class="password-text"><span class="char1">p</span><span class="char2">a</span><span class="char3">s</span><span class="char4">s</span><span class="char5">w</span><span class="char6">o</span><span class="char7">r</span><span class="char8">d</span></span>
+    <span class="password-dots"><span class="char1">p</span><span class="char2">a</span><span class="char3">s</span><span class="char4">s</span><span class="char5">w</span><span class="char6">o</span><span class="char7">r</span><span class="char8">d</span></span>
+
+  </div>
+  <button class="button-4" role="button" id="validate-btn">Verify Password</button>
+
+ 
+  
+  
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64" id="monkey-hands">
+    <path fill="#89664C" d="M9.4,32.5L2.1,61.9H14c-1.6-7.7,4-21,4-21L9.4,32.5z"></path>
+    <path fill="#FFD6BB" d="M15.8,24.8c0,0,4.9-4.5,9.5-3.9c2.3,0.3-7.1,7.6-7.1,7.6s9.7-8.2,11.7-5.6c1.8,2.3-8.9,9.8-8.9,9.8
+  s10-8.1,9.6-4.6c-0.3,3.8-7.9,12.8-12.5,13.8C11.5,43.2,6.3,39,9.8,24.4C11.6,17,13.3,25.2,15.8,24.8"></path>
+    <path fill="#89664C" d="M54.8,32.5l7.3,29.4H50.2c1.6-7.7-4-21-4-21L54.8,32.5z"></path>
+    <path fill="#FFD6BB" d="M48.4,24.8c0,0-4.9-4.5-9.5-3.9c-2.3,0.3,7.1,7.6,7.1,7.6s-9.7-8.2-11.7-5.6c-1.8,2.3,8.9,9.8,8.9,9.8
+  s-10-8.1-9.7-4.6c0.4,3.8,8,12.8,12.6,13.8c6.6,1.3,11.8-2.9,8.3-17.5C52.6,17,50.9,25.2,48.4,24.8"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64" id="monkey">
+    <ellipse cx="53.7" cy="33" rx="8.3" ry="8.2" fill="#89664c"></ellipse>
+    <ellipse cx="53.7" cy="33" rx="5.4" ry="5.4" fill="#ffc5d3"></ellipse>
+    <ellipse cx="10.2" cy="33" rx="8.2" ry="8.2" fill="#89664c"></ellipse>
+    <ellipse cx="10.2" cy="33" rx="5.4" ry="5.4" fill="#ffc5d3"></ellipse>
+    <g fill="#89664c">
+      <path d="m43.4 10.8c1.1-.6 1.9-.9 1.9-.9-3.2-1.1-6-1.8-8.5-2.1 1.3-1 2.1-1.3 2.1-1.3-20.4-2.9-30.1 9-30.1 19.5h46.4c-.7-7.4-4.8-12.4-11.8-15.2"></path>
+      <path d="m55.3 27.6c0-9.7-10.4-17.6-23.3-17.6s-23.3 7.9-23.3 17.6c0 2.3.6 4.4 1.6 6.4-1 2-1.6 4.2-1.6 6.4 0 9.7 10.4 17.6 23.3 17.6s23.3-7.9 23.3-17.6c0-2.3-.6-4.4-1.6-6.4 1-2 1.6-4.2 1.6-6.4"></path>
+    </g>
+    <path d="m52 28.2c0-16.9-20-6.1-20-6.1s-20-10.8-20 6.1c0 4.7 2.9 9 7.5 11.7-1.3 1.7-2.1 3.6-2.1 5.7 0 6.1 6.6 11 14.7 11s14.7-4.9 14.7-11c0-2.1-.8-4-2.1-5.7 4.4-2.7 7.3-7 7.3-11.7" fill="#e0ac7e"></path>
+    <g fill="#3b302a">
+      <path d="m35.1 38.7c0 1.1-.4 2.1-1 2.1-.6 0-1-.9-1-2.1 0-1.1.4-2.1 1-2.1.6.1 1 1 1 2.1"></path>
+      <path d="m30.9 38.7c0 1.1-.4 2.1-1 2.1-.6 0-1-.9-1-2.1 0-1.1.4-2.1 1-2.1.5.1 1 1 1 2.1"></path>
+      <ellipse cx="40.7" cy="31.7" rx="3.5" ry="4.5"></ellipse>
+      <ellipse cx="23.3" cy="31.7" rx="3.5" ry="4.5"></ellipse>
+    </g>
+  </symbol>
+</svg>
+
+<!--- ## DRIBBBLE + TWITTER ############# 
+<div class="socials">
+  <a class="dribbble" href="https://dribbble.com/shots/8860507-Show-Hide-Password-animation-CodePen" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32">
+      <path fill-rule="evenodd" clip-rule="evenodd" fill="black" d="M16 0C7.16703 0 0 7.16703 0 16C0 24.833 7.16703 32 16 32C24.8156 32 32 24.833 32 16C32 7.16703 24.8156 0 16 0ZM26.5683 7.37527C28.4772 9.70065 29.6226 12.6681 29.6573 15.8785C29.2061 15.7918 24.6941 14.872 20.1475 15.4447C20.0434 15.2191 19.9566 14.9761 19.8525 14.7332C19.5748 14.0738 19.2625 13.397 18.9501 12.7549C23.9826 10.7072 26.2733 7.75705 26.5683 7.37527ZM16 2.36009C19.4707 2.36009 22.6464 3.66161 25.0586 5.7961C24.8156 6.14317 22.7505 8.90239 17.8915 10.7245C15.6529 6.61171 13.1714 3.24512 12.7896 2.72451C13.8134 2.48156 14.8894 2.36009 16 2.36009ZM10.1866 3.64425C10.551 4.13015 12.9805 7.5141 15.2538 11.5401C8.86768 13.2408 3.22777 13.2061 2.62039 13.2061C3.50542 8.9718 6.36876 5.44902 10.1866 3.64425ZM2.32538 16.0174C2.32538 15.8785 2.32538 15.7397 2.32538 15.6009C2.9154 15.6182 9.54447 15.705 16.3644 13.6573C16.7636 14.4208 17.128 15.2017 17.4751 15.9826C17.3015 16.0347 17.1106 16.0868 16.9371 16.1388C9.89154 18.4121 6.14317 24.6247 5.8308 25.1453C3.6616 22.7332 2.32538 19.5228 2.32538 16.0174ZM16 29.6746C12.8416 29.6746 9.92625 28.5987 7.61822 26.7939C7.86117 26.2907 10.6377 20.9458 18.3427 18.256C18.3774 18.2386 18.3948 18.2386 18.4295 18.2213C20.3557 23.2017 21.1367 27.3839 21.3449 28.5813C19.6963 29.2928 17.8915 29.6746 16 29.6746ZM23.6182 27.3319C23.4794 26.4989 22.7505 22.5076 20.9631 17.5965C25.2495 16.9197 28.9978 18.0304 29.4664 18.1866C28.8764 21.987 26.6898 25.2668 23.6182 27.3319Z"></path>
+    </svg></a>
+  <a class="twitter" href="https://twitter.com/MilanRaring" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 72 72">
+      <path fill="black" d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z"></path>
+    </svg></a>
+</div>-->
+ <!--
+ <script src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-ca64887d-1cdc-61e5-c152-3dbabd7b0bd8" crossorigin=""></script> -->
+<script src="index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  <script type="text/javascript">
+
+    var $ = (s, o = document) => o.querySelector(s);
+var $$ = (s, o = document) => o.querySelectorAll(s);
+
+$(".password-input").addEventListener("input", value, false);
+window.addEventListener("load", value, false);
+
+function value() { 
+  $(".password-text").textContent = $(".password-input").value;
+  charming($(".password-text"));
+  $(".password-dots").textContent = $(".password-input").value;
+  charming($(".password-dots"));
+};
+
+$(".monkey").addEventListener("click", function() {
+  $(".password").classList.toggle("show");
+});
+
+$(".password-input").addEventListener("focusin", function() {
+  $$(".password-text, .password-dots").forEach(el => el.classList.add('cursor'))
+});
+
+$(".password-input").addEventListener("focusout", function() {
+  $$(".password-text, .password-dots").forEach(el => el.classList.remove('cursor'))
+});
+
+
+
+  </script>
+
+
+<script>
+       
+
+        // Function to hash the password with the salt
+        async function hashPassword(password, salt) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password + salt);
+            const hashBuffer = await window.crypto.subtle.digest('SHA-256', data);
+            return Array.from(new Uint8Array(hashBuffer)).map(byte => ('0' + byte.toString(16)).slice(-2)).join('');
+        }
+
+        // Function to validate the password
+        async function validatePassword() {
+            const storedSalt = 'aeded503175a77ffa46a6aa03d286afd'; // Retrieve from the database
+            const storedHashedPassword = '70dd1e0d37e096a503bec5ca0c23d06988b6dc246fdcd1e841dbd37f17c08d40'; // Retrieve from the database
+            var inputPassword = $(".password-input").value;
+            const hashedPassword = await hashPassword(inputPassword, storedSalt);
+            console.log('Is Valid:', storedHashedPassword === hashedPassword);
+            if (storedHashedPassword === hashedPassword) {
+                // If password is valid, save it to a cookie
+                var expirationDate = new Date();
+                expirationDate.setDate(expirationDate.getDate() + 1); // Set expiration date to 1 day from now
+                // Set cookie attributes
+                let cookieAttributes = [
+                    'expires=' + expirationDate.toUTCString(),
+                    'path=/',
+                    'SameSite=None',
+                    'Secure'
+                ];
+                // Set the cookie
+                    document.cookie = 'validatedPassword=' + inputPassword + '; ' + cookieAttributes.join('; ');
+                return true;
+              } else {
+                return false;
+            }
+            
+        }
+
+        
+        document.getElementById('validate-btn').addEventListener('click', async () => {
+          const isValid = await validatePassword();
+          if (isValid) {
+              const hrefs = [
+                  'Page1/myLove.html',
+                  'Page2/myLove.html',
+                  'Page3/myLove.html'
+              ];
+
+              // Select a random index from 0 to 2
+            const randomIndex = Math.floor(Math.random() * hrefs.length);
+            // Get the random href value
+            const randomHref = hrefs[randomIndex];
+            // Open the random href in a new tab
+            //window.open(randomHref, '_blank');
+              window.location.href = randomHref;
+              //alert('Password is valid!');
+          } else {
+              alert('Password is invalid!');
+          }
+      });
+
+var hoverCount = 0; // Counter to track the number of mouse hovers
+var clickCount = 0; // Counter to track the number of clicks
+
+function checkAndMove(e) {
+    if (hoverCount >= 10) {
+        // If hover count reaches 10, remove the onmouseover event listener
+        e.onmouseover = null;
+        return;
+    }
+
+    if (clickCount < 10) {
+        var randomNumber = Math.random();
+        if (randomNumber < 0.5) {
+            move(e); // Move randomly only half of the time
+        }
+    }
+}
+
+function changeLocation(e) {
+    console.log("done" + clickCount );
+    if (clickCount >= 10) {
+        // If click count reaches 10, remove the onclick event listener
+        var passworddiv = document.getElementsByClassName("password");
+        for (var i = 0; i < passworddiv.length; i++) {
+            passworddiv[i].style.display = "block";
+        }
+        var containerdiv = document.getElementsByClassName("container");
+        for (var i = 0; i < containerdiv.length; i++) {
+            containerdiv[i].style.display = "none"; // Hide all buttons with class name "container"
+        }
+        console.log("done")
+       
+        e.onclick = null;
+        return;
+    }
+
+    if (hoverCount < 10) {
+        var randomNumber = Math.random();
+        if (randomNumber < 0.5) {
+            e.style.position = "absolute";
+            var container = document.querySelector(".container");
+            var containerRect = container.getBoundingClientRect();
+            var containerWidth = containerRect.width;
+            var containerHeight = containerRect.height;
+            var newLeft = Math.random() * (containerWidth - e.offsetWidth);
+            var newTop = Math.random() * (containerHeight - e.offsetHeight);
+            e.style.left = newLeft + "px";
+            e.style.top = newTop + "px";
+            
+        }
+    }
+    clickCount++;
+}
+
+function move(e) {
+    if (hoverCount >= 10) return; // If hover count reaches 10, return
+
+    var container = document.querySelector(".container");
+    var containerRect = container.getBoundingClientRect();
+    var width = containerRect.width;
+    var height = containerRect.height;
+
+    width = width - (width * 0.04);
+    height = height - (height * 0.1);
+
+    var newPos = {
+        left: chooseSide(e.offsetLeft, width),
+        top: chooseSide(e.offsetTop, height)
+    };
+
+    e.style.transition = "left 0.5s, top 0.5s";
+    e.style.left = newPos.left + "px";
+    e.style.top = newPos.top + "px";
+
+    hoverCount++; // Increment the hover count
+}
+
+function chooseSide(pos, size) {
+    do {
+        var random = Math.random() * size;
+    } while (Math.abs(pos - random) <= size * 0.1);
+
+    return random;
+}
+
+
+    </script>
+
+
+
+
+
+
+
+</body></html>
