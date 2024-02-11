@@ -711,7 +711,6 @@ function changeLocation(e) {
             containerdiv[i].style.display = "none"; // Hide all buttons with class name "container"
         }
         console.log("done")
-        zoomIn();
         e.onclick = null;
         return;
     }
@@ -766,21 +765,6 @@ function chooseSide(pos, size) {
 }
 
 
-let zoomLevel = 1.0; // Initial zoom level
-
-    function zoomIn() {
-        zoomLevel += 0.5; // Increase zoom level by 20%
-        updateZoom();
-    }
-
-    function zoomOut() {
-        zoomLevel -= 0.2; // Decrease zoom level by 20%
-        updateZoom();
-    }
-
-    function updateZoom() {
-        document.body.style.transform = `scale(${zoomLevel})`;
-    }
 
     </script>
 
